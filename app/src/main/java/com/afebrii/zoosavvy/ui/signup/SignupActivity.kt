@@ -26,5 +26,5 @@ class SignupActivity : AppCompatActivity() {
             startActivity(i)
             finish()
         }
-    } //Test
+    } //Test //
 }
