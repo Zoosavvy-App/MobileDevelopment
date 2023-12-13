@@ -92,42 +92,6 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/mobileTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/mobile_no"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/mobileEditTextLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        app:cursorColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mobileTextView"
-        app:startIconDrawable="@drawable/ic_phone"
-        app:startIconTint="@color/white">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/mobileEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/custom_edittext"
-            android:inputType="number"
-            android:textColor="@color/white"
-            app:boxStrokeColor="@color/white" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
 
     <TextView
         android:id="@+id/passwordTextView"
@@ -136,9 +100,8 @@
         android:layout_marginStart="32dp"
         android:text="@string/password"
         android:textColor="@color/white"
-        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mobileEditTextLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout" />
 
 
     <!--    <androidx.appcompat.widget.LinearLayoutCompat-->
@@ -150,16 +113,7 @@
 <!--        app:layout_constraintTop_toBottomOf="@+id/mobileEditTextLayout">-->
 
 
-    <TextView
-        android:id="@+id/confirmPasswordTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/confirm_password"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/passwordTextView"
-        app:layout_constraintTop_toBottomOf="@+id/mobileEditTextLayout" />
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordEditTextLayout"
@@ -185,27 +139,7 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/confirmPasswordEditTextLayout"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        app:cursorColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmPasswordTextView"
-        app:startIconDrawable="@drawable/ic_password"
-        app:startIconTint="@color/white">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/confirmPasswordEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/custom_edittext"
-            android:inputType="textPassword"
-            android:textColor="@color/white"
-            app:boxStrokeColor="@color/white" />
-
-    </com.google.android.material.textfield.TextInputLayout>
 
 <!--    </androidx.appcompat.widget.LinearLayoutCompat>-->
 
