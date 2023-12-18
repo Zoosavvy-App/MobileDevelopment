@@ -61,4 +61,6 @@ class MainActivity : AppCompatActivity() {
 
         eventRecyclerView.adapter = EventAdapter(eventArrayList)
     }
+
+    // Merge Development
 }
