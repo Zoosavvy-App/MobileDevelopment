@@ -1,5 +1,6 @@
 package com.afebrii.zoosavvy.ui.maps
 
+import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,7 +9,6 @@ import android.view.MenuItem
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import com.afebrii.zoosavvy.R
-
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -16,10 +16,14 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.afebrii.zoosavvy.databinding.ActivityMapsBinding
+import com.afebrii.zoosavvy.ui.main.MainActivity
+import com.afebrii.zoosavvy.ui.news.NewsActivity
+import com.afebrii.zoosavvy.ui.satwa.SatwaActivity
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
-
+    private lateinit var bottomNavigationView: BottomNavigationView
     private lateinit var mMap: GoogleMap
     private lateinit var binding: ActivityMapsBinding
 
@@ -28,11 +32,39 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+
+        bottomNavigationView = findViewById(R.id.navigation_bottom_view)
+
+        bottomNavigationView.setOnItemSelectedListener {
+            when(it.itemId){
+                R.id.bottom_home -> {
+                    val i = Intent (this, MainActivity::class.java)
+                    startActivity(i)
+                    finish()
+                    return@setOnItemSelectedListener true
+                }
+                R.id.bottom_satwa -> {
+                    val i = Intent(this, SatwaActivity::class.java)
+                    startActivity(i)
+                    finish()
+                    return@setOnItemSelectedListener true
+                }
+                R.id.bottom_news -> {
+                    val i = Intent(this, NewsActivity::class.java)
+                    startActivity(i)
+                    finish()
+                    return@setOnItemSelectedListener true
+                }
+                else -> return@setOnItemSelectedListener true
+            }
+        }
+
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

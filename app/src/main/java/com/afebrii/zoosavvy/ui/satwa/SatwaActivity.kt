@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.afebrii.zoosavvy.R
 import com.afebrii.zoosavvy.ui.main.MainActivity
+import com.afebrii.zoosavvy.ui.maps.MapsActivity
 import com.afebrii.zoosavvy.ui.news.NewsActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -79,6 +80,14 @@ class SatwaActivity : AppCompatActivity() {
                 }
                 R.id.bottom_news -> {
                     val i = Intent(this, NewsActivity::class.java)
+                    startActivity(i)
+                    finish()
+                    return@setOnItemSelectedListener true
+                }
+
+
+                R.id.bottom_peta -> {
+                    val i = Intent(this,  MapsActivity::class.java)
                     startActivity(i)
                     finish()
                     return@setOnItemSelectedListener true
