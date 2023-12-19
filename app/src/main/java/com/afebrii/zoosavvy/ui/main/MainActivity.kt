@@ -7,9 +7,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.afebrii.zoosavvy.R
 import com.afebrii.zoosavvy.databinding.ActivityMainBinding
+import com.afebrii.zoosavvy.ui.maps.MapsActivity
+import com.afebrii.zoosavvy.ui.news.NewsActivity
+import com.afebrii.zoosavvy.ui.satwa.SatwaActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var bottomNavigationView: BottomNavigationView
     private lateinit var eventRecyclerView: RecyclerView
     private lateinit var eventArrayList: ArrayList<Event>
     lateinit var imageId: Array<Int>
@@ -21,10 +26,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         imageId = arrayOf(
-            R.drawable.image_event_a,
-            R.drawable.image_event_b,
-            R.drawable.image_event_c,
+            R.drawable.news_a,
+            R.drawable.news_b,
+            R.drawable.news_c,
         )
 
         judul = arrayOf(
@@ -51,6 +57,34 @@ class MainActivity : AppCompatActivity() {
         
         eventArrayList = arrayListOf<Event>()
             getEventData()
+
+        bottomNavigationView = findViewById(R.id.navigation_bottom_view)
+
+        bottomNavigationView.setOnItemSelectedListener {
+            when(it.itemId){
+                R.id.bottom_home -> {
+                    true
+                }
+                R.id.bottom_satwa -> {
+                    val i = Intent(this, SatwaActivity::class.java)
+                    startActivity(i)
+                    true
+                }
+                R.id.bottom_news -> {
+                    val i = Intent(this, NewsActivity::class.java)
+                    startActivity(i)
+                    true
+                }
+                R.id.bottom_peta -> {
+                    val i = Intent(this, MapsActivity::class.java)
+                    startActivity(i)
+                    true
+                }
+                else -> true
+            }
+        }
+
+
     }
 
     private fun getEventData() {
@@ -61,4 +95,6 @@ class MainActivity : AppCompatActivity() {
 
         eventRecyclerView.adapter = EventAdapter(eventArrayList)
     }
+
+    // Merge Development
 }
