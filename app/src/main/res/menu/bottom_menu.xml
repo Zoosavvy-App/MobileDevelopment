@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home"/>
+    <item
+        android:id="@+id/bottom_peta"
+        android:icon="@drawable/ic_peta"
+        android:title="Peta"/>
+    <item
+        android:id="@+id/bottom_scan"
+        android:icon="@drawable/ic_scan"
+        android:title="Scan"/>
+    <item
+        android:id="@+id/bottom_satwa"
+        android:icon="@drawable/ic_satwa"
+        android:title="Satwa"/>
+    <item
+        android:id="@+id/bottom_news"
+        android:icon="@drawable/ic_news"
+        android:title="News"/>
+
+</menu>
