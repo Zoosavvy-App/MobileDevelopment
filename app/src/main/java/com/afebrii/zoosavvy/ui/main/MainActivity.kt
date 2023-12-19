@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.afebrii.zoosavvy.R
 import com.afebrii.zoosavvy.databinding.ActivityMainBinding
+import com.afebrii.zoosavvy.ui.maps.MapsActivity
 import com.afebrii.zoosavvy.ui.news.NewsActivity
 import com.afebrii.zoosavvy.ui.satwa.SatwaActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -71,6 +72,11 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.bottom_news -> {
                     val i = Intent(this, NewsActivity::class.java)
+                    startActivity(i)
+                    true
+                }
+                R.id.bottom_peta -> {
+                    val i = Intent(this, MapsActivity::class.java)
                     startActivity(i)
                     true
                 }

@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.afebrii.zoosavvy.R
 import com.afebrii.zoosavvy.ui.main.EventAdapter
 import com.afebrii.zoosavvy.ui.main.MainActivity
+import com.afebrii.zoosavvy.ui.maps.MapsActivity
 import com.afebrii.zoosavvy.ui.satwa.SatwaActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -71,6 +72,11 @@ class NewsActivity : AppCompatActivity() {
                     true
                 }
                 R.id.bottom_news -> {
+                    true
+                }
+                R.id.bottom_peta -> {
+                    val i = Intent(this, MapsActivity::class.java)
+                    startActivity(i)
                     true
                 }
                 else -> true
