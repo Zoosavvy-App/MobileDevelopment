@@ -30,9 +30,9 @@ class MainActivity : AppCompatActivity() {
 
 
         imageId = arrayOf(
-            R.drawable.image_event_a,
-            R.drawable.image_event_b,
-            R.drawable.image_event_c,
+            R.drawable.news_a,
+            R.drawable.news_b,
+            R.drawable.news_c,
         )
 
         judul = arrayOf(
@@ -65,30 +65,24 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.bottom_home -> {
-                    val i = Intent (this, MainActivity::class.java)
-                    startActivity(i)
-                    finish()
-                    return@setOnItemSelectedListener true
+                    true
                 }
                 R.id.bottom_satwa -> {
                     val i = Intent(this, SatwaActivity::class.java)
                     startActivity(i)
-                    finish()
-                    return@setOnItemSelectedListener true
+                    true
                 }
                 R.id.bottom_news -> {
                     val i = Intent(this, NewsActivity::class.java)
                     startActivity(i)
-                    finish()
-                    return@setOnItemSelectedListener true
+                    true
                 }
                 R.id.bottom_peta -> {
-                    val i = Intent(this,  MapsActivity::class.java)
+                    val i = Intent(this, MapsActivity::class.java)
                     startActivity(i)
-                    finish()
-                    return@setOnItemSelectedListener true
+                    true
                 }
-                else -> return@setOnItemSelectedListener true
+                else -> true
             }
         }
 
@@ -105,5 +99,4 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Merge Development
-    //
 }
