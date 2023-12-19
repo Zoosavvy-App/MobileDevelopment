@@ -1,5 +1,6 @@
 package com.afebrii.zoosavvy.ui.main
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var tempat: Array<String>
     lateinit var tanggal: Array<String>
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -54,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         eventRecyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, false)
         eventRecyclerView.setHasFixedSize(true)
         
-        eventArrayList = arrayListOf<Event>()
+        this.eventArrayList = arrayListOf<Event>()
             getEventData()
 
         bottomNavigationView = findViewById(R.id.navigation_bottom_view)
