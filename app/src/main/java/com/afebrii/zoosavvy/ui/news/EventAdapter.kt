@@ -10,7 +10,7 @@ import com.afebrii.zoosavvy.R
 
 class EventAdapter(private val newListEvent: ArrayList<Event>): RecyclerView.Adapter<EventAdapter.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventAdapter.MyViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_item_event, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_item_event_news, parent, false)
         return MyViewHolder(itemView)
     }
 
@@ -27,9 +27,9 @@ class EventAdapter(private val newListEvent: ArrayList<Event>): RecyclerView.Ada
     }
 
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        val ivImage: ImageView = itemView.findViewById(R.id.iv_event)
-        val tvJudul: TextView = itemView.findViewById(R.id.tv_judul_event)
-        val tvTempat: TextView = itemView.findViewById(R.id.tv_tempat_event)
-        val tvTanggal: TextView = itemView.findViewById(R.id.tv_tanggal_event)
+        val ivImage: ImageView = itemView.findViewById(R.id.iv_news)
+        val tvJudul: TextView = itemView.findViewById(R.id.judul_news)
+        val tvTempat: TextView = itemView.findViewById(R.id.tempat_news)
+        val tvTanggal: TextView = itemView.findViewById(R.id.tanggal_news)
     }
 }

@@ -58,12 +58,13 @@
 
             <TextView
                 android:id="@+id/tv_deskripsi"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_nama"
                 tools:text="Harimau Sumatera, atau Panthera tigris sumatrae, adalah salah satu subspesies harimau yang secara eksklusif dapat ditemui di pulau Sumatera, Indonesia. Harimau ini dikenal karena ukurannya yang lebih kecil dibandingkan dengan beberapa subspesies harimau lainnya, tetapi kecantikan dan keanggunannya tetap memukau. Dengan bulu berwarna kuning kecokelatan yang dihiasi oleh garis-garis hitam tebal, harimau Sumatera memiliki pola corak unik yang membedakannya dari harimau lain. Keberadaan mereka kini terancam oleh hilangnya habitat alaminya, perburuan ilegal, dan konflik dengan manusia. Sebagai spesies yang terancam punah, upaya konservasi yang serius diperlukan untuk melindungi harimau Sumatera dan memastikan kelangsungan hidup mereka di alam liar. Keberadaan mereka tidak hanya penting bagi ekosistem, tetapi juga sebagai simbol keanekaragaman hayati Indonesia yang perlu dilestarikan untuk generasi mendatang." />
