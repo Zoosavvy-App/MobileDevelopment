@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="3dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    app:cardCornerRadius="20dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/iv_satwa"
+                android:layout_width="match_parent"
+                android:layout_height="195dp"
+                android:layout_marginBottom="175dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/satwa_a"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_nama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_satwa"
+                tools:text="Harimau"/>
+
+            <TextView
+                android:id="@+id/tv_nama_latin"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="13dp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toEndOf="@+id/tv_nama"
+                app:layout_constraintTop_toBottomOf="@+id/iv_satwa"
+                tools:text="Panthera" />
+
+            <TextView
+                android:id="@+id/tv_deskripsi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nama"
+                tools:text="Harimau Sumatera, atau Panthera tigris sumatrae, adalah salah satu subspesies harimau yang secara eksklusif dapat ditemui di pulau Sumatera, Indonesia. Harimau ini dikenal karena ukurannya yang lebih kecil dibandingkan dengan beberapa subspesies harimau lainnya, tetapi kecantikan dan keanggunannya tetap memukau. Dengan bulu berwarna kuning kecokelatan yang dihiasi oleh garis-garis hitam tebal, harimau Sumatera memiliki pola corak unik yang membedakannya dari harimau lain. Keberadaan mereka kini terancam oleh hilangnya habitat alaminya, perburuan ilegal, dan konflik dengan manusia. Sebagai spesies yang terancam punah, upaya konservasi yang serius diperlukan untuk melindungi harimau Sumatera dan memastikan kelangsungan hidup mereka di alam liar. Keberadaan mereka tidak hanya penting bagi ekosistem, tetapi juga sebagai simbol keanekaragaman hayati Indonesia yang perlu dilestarikan untuk generasi mendatang." />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
