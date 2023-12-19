@@ -62,21 +62,19 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.bottom_home -> {
-                    return@setOnItemSelectedListener true
+                    true
                 }
                 R.id.bottom_satwa -> {
                     val i = Intent(this, SatwaActivity::class.java)
                     startActivity(i)
-                    finish()
-                    return@setOnItemSelectedListener true
+                    true
                 }
                 R.id.bottom_news -> {
                     val i = Intent(this, NewsActivity::class.java)
                     startActivity(i)
-                    finish()
-                    return@setOnItemSelectedListener true
+                    true
                 }
-                else -> return@setOnItemSelectedListener true
+                else -> true
             }
         }
 
