@@ -72,9 +72,6 @@ class SatwaActivity : AppCompatActivity() {
                     return@setOnItemSelectedListener true
                 }
                 R.id.bottom_satwa -> {
-                    val i = Intent(this, SatwaActivity::class.java)
-                    startActivity(i)
-                    finish()
                     return@setOnItemSelectedListener true
                 }
                 R.id.bottom_news -> {

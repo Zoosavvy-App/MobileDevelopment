@@ -13,9 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
+        android:src="@drawable/ic_username_green"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/ic_username_green" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -24,9 +24,9 @@
         android:layout_marginStart="4dp"
         android:textSize="12sp"
         android:textStyle="bold"
+        android:text="Hi Miko"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2"
-        tools:text="Hi! Miko" />
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
     <TextView
         android:id="@+id/textView2"
@@ -85,9 +85,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/green"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/navigation_bottom_view"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigation_bottom_view"
@@ -98,6 +99,7 @@
         android:elevation="2dp"
         app:menu="@menu/bottom_menu"
         app:labelVisibilityMode="unlabeled"
+        app:itemRippleColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 
