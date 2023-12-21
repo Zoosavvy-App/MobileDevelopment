@@ -4,7 +4,8 @@
     <item
         android:id="@+id/bottom_home"
         android:icon="@drawable/ic_home"
-        android:title="Home"/>
+        android:title="Home"
+        />
     <item
         android:id="@+id/bottom_peta"
         android:icon="@drawable/ic_peta"

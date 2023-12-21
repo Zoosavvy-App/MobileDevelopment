@@ -82,8 +82,6 @@ class MainActivity : AppCompatActivity() {
                 }
                 else -> true
             }
-
-            // commit
         }
 
 
