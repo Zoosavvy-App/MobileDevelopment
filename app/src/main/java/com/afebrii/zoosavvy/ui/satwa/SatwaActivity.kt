@@ -9,6 +9,7 @@ import com.afebrii.zoosavvy.R
 import com.afebrii.zoosavvy.ui.main.MainActivity
 import com.afebrii.zoosavvy.ui.maps.MapsActivity
 import com.afebrii.zoosavvy.ui.news.NewsActivity
+import com.afebrii.zoosavvy.ui.scan.ScanActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class SatwaActivity : AppCompatActivity() {
@@ -85,6 +86,13 @@ class SatwaActivity : AppCompatActivity() {
                     startActivity(i)
                     true
                 }
+
+                R.id.bottom_scan -> {
+                    val i = Intent(this, ScanActivity::class.java)
+                    startActivity(i)
+                    true
+                }
+
                 else -> true
             }
         }

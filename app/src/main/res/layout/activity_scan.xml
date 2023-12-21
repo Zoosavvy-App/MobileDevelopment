@@ -41,8 +41,8 @@
         tools:ignore="MissingConstraints" />
 
 
-    <EditText
-        android:id="@+id/tv_des"
+    <TextView
+        android:id="@+id/tvhasil"
         android:layout_width="377dp"
         android:layout_height="101dp"
         android:layout_marginStart="16dp"
@@ -51,11 +51,10 @@
         android:background="@drawable/desc_box"
         android:gravity="top|left"
         android:hint="@string/description"
-        android:inputType="textMultiLine"
         android:maxHeight="180dp"
         android:maxLines="8"
         android:padding="15dp"
-        android:textSize="25dp"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="@id/ImageView"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@id/ImageView"
