@@ -12,3 +12,10 @@ A313BSY2494 | Andika Febriansyah    | Universitas Siliwangi
 - IntentX
 - Navigation Component
 - Recycler View
+
+
+## Implementation Works
+- Create UI Application
+- Implementation UI to Android Studi
+- Implementation code logic application
+- Make all pages application
